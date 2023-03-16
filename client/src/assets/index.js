@@ -12,6 +12,9 @@ import menu from './menu.svg';
 import money from './money.svg';
 import loader from './loader.svg';
 import thirdweb from './thirdweb.png';
+import doctors from './doctors.svg'
+import docs from './docs.png'
+import standocs from './standocs.png'
 
 export {
   tagType,
@@ -28,4 +31,7 @@ export {
   money,
   loader,
   thirdweb,
+  doctors,
+  docs,
+  standocs
 };
