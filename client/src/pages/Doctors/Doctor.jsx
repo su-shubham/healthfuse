@@ -1,12 +1,8 @@
 import React from "react";
-import SearchBar from "../../components/SearchBar";
 import {
-  CustomButton,
-  DisplayCampaigns,
   DoctorsCard,
   Sidebar,
 } from "../../components";
-import CampaignDetails from "../CampaignDetails";
 
 const Doctor = () => {
   return (

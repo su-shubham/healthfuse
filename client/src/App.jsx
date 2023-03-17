@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { CampaignDetails, Home, Doctor, CreateCampaign } from "./pages";
+import {  Doctor } from "./pages";
 import Appointment from "./pages/Appointments/Appointment";
 import Dashboard from "./pages/Dashboard";
 import HomePage from "./pages/HomePage";
