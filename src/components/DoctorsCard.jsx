@@ -17,7 +17,7 @@ const DoctorsCard = ({
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
-    fetch("https://getdoc.free.beeceptor.com/doctors")
+    fetch("https://medihelp.free.beeceptor.com/doctors")
       .then((response) => response.json())
       .then((data) => setDoctors(data))
       .catch((error) => console.log(error));
@@ -36,11 +36,11 @@ const DoctorsCard = ({
         className="sm:w-[288px] w-full  px-6 rounded-[15px] bg-orange-300 cursor-pointer"
         onClick={handleClick}
       >
-        {/* <img
+        <img
         src={doctors.specialphto}
         alt="fund"
         className="w-full h-[158px] object-cover rounded-[15px]"
-      /> */}
+      />
 
         <div className="flex flex-col p-4">
           <div className="flex flex-row items-center mb-[18px]">
@@ -86,12 +86,12 @@ const DoctorsCard = ({
           </div>
 
           <div className="flex items-center mt-[20px] gap-[12px]">
-            <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#13131a]">
-              {/* <img
+            <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center ">
+              <img
               src={doctors.docphoto}
               alt="user"
-              className="w-1/2 h-1/2 object-contain"
-            /> */}
+              className="w-1/2 h-1/2 "
+            />
             </div>
             <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
               by <span className="text-[#b2b3bd]">{owner}</span>
@@ -115,13 +115,13 @@ const DoctorsCard = ({
                 for="name"
                 class="block mb-2 text-sm font-medium text-gray-900"
               >
-                Name :
+                Name : {doctor.name}
               </label>
               <label
                 for="name"
                 class="block mb-2 text-sm font-medium text-gray-900"
               >
-                Services :
+                Services : {doctor.speliazation}
               </label>
             </div>
             <div className="space-x-2">

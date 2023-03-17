@@ -17,9 +17,9 @@ export const navlinks = [
     link: '/doctors',
   },
   {
-    name: 'Donate',
+    name: 'Chat',
     imgUrl: money,
-    link: '/',
+    link: '/chat',
   },
   {
     name: 'logout',

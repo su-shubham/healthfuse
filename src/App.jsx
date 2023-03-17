@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage";
 import Blogs from "./components/Blogs";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import ChatBot from "./components/ChatBot";
+
 
 const App = () => {
   return (
@@ -17,7 +19,7 @@ const App = () => {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/doctors" element={<Doctor />} />
             <Route path="/appointments" element={<Appointment />} />
-            {/* <Route path="/chat" element={<ChatBot />} /> */}
+            <Route path="/chat" element={<ChatBot />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/community" element={<Appointment />} />
             <Route path="/register" element={<Register />} />
