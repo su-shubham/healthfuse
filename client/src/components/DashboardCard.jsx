@@ -3,7 +3,7 @@ import CustomButton from "./CustomButton";
 
 const DoctorsCard = () => {
   return (
-    <div className="flex space-x-7">
+    <div className="flex space-x-7 px-28 mt-4">
       <div className="grid w-1/2 px-16 space-y-10">
         <div className=" h-32 bg-orange-50 p-3 border-l-8 border-orange-400   rounded-r-lg  hover:border-orange-500 hover:shadow-lg hover:shadow-orange-300 transition ease-in-out duration-700 ">
           <h5 className="mb-2 text-md  font-extrabold text-orange-400 uppercase font-epilogue">
@@ -38,7 +38,7 @@ const DoctorsCard = () => {
           <CustomButton
             btnType="button"
             title="Chat Now"
-            styles="w-32  bg-[#8c6dfd] "
+            styles="w-32  bg-red-400  hover:bg-red-500"
             handleClick={() => {}}
           />
         </div>

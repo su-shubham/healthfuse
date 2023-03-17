@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { ethers } from 'ethers';
-
 import { useStateContext } from '../../context';
 import { money } from '../../assets';
-import { CustomButton, FormField, Loader } from '../../components';
+import { CustomButton, FormField, Loader, Sidebar } from '../../components';
 import { checkIfImage } from '../../utils';
 
-const CreateCampaign = () => {
+const Appointments = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
   const { createCampaign } = useStateContext();
@@ -46,6 +44,7 @@ const CreateCampaign = () => {
       <div className="flex justify-center items-center p-[16px] sm:min-w-[380px] rounded-[10px]">
         <h1 className="font-epilogue font-bold sm:text-[25px] text-[18px] leading-[38px] text-white">Start a Campaign</h1>
       </div>
+      <Sidebar/>
 
       <form onSubmit={handleSubmit} className="w-full mt-[65px] flex flex-col gap-[30px]">
         <div className="flex flex-wrap gap-[40px]">
@@ -115,4 +114,4 @@ const CreateCampaign = () => {
   )
 }
 
-export default CreateCampaign
+export default Appointments

@@ -15,6 +15,9 @@ import thirdweb from './thirdweb.png';
 import doctors from './doctors.svg'
 import docs from './docs.png'
 import standocs from './standocs.png'
+import tipping from './tipping.png'
+import doctor from './doctors.png'
+import stethoscope from './stethoscope.svg'
 
 export {
   tagType,
@@ -33,5 +36,8 @@ export {
   thirdweb,
   doctors,
   docs,
-  standocs
+  standocs,
+  tipping,
+  doctor,
+  stethoscope
 };

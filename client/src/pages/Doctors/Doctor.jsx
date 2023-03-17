@@ -1,15 +1,18 @@
 import React from "react";
 import SearchBar from "../../components/SearchBar";
-import { CustomButton, DoctorsCard } from "../../components";
+import {
+  CustomButton,
+  DisplayCampaigns,
+  DoctorsCard,
+  Sidebar,
+} from "../../components";
+import CampaignDetails from "../CampaignDetails";
 
 const Doctor = () => {
   return (
-    <div className="mt-10 text-3xl text-gray-700">
-      Book a doctor appointments under 2 Minutes
-      <div className="mt-10">
-        <SearchBar id="searchDoctor" label="Search Doctor" />
-      </div>
-      <div className="mt-10">
+    <div className="flex">
+      <Sidebar />
+      <div className="flex flex-wrap justify-center gap-4 mx-10">
         <DoctorsCard />
       </div>
     </div>
