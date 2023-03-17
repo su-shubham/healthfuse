@@ -30,7 +30,7 @@ const Footer = () => {
             </span>
             <span class="text-sm text-gray-500 sm:text-center :text-gray-400">
               © 2023{" "}
-                MediFuse™
+                MediFund™
               . All Rights Reserved.
             </span>
           </div>

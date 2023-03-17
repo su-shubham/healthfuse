@@ -85,7 +85,7 @@ function Testimonials() {
   return (
     <div className="w-full px-4 py-12 bg-[#ffeddb] ">
       <div className="max-w-screen-xl mx-auto">
-        <h2 className="text-3xl font-bold text-orange-600 text-center mb-8">
+        <h2 className="text-4xl font-bold text-orange-600 text-center mb-8">
           Testimonials
         </h2>
         <Slider {...settings}>

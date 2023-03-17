@@ -18,6 +18,12 @@ import standocs from './standocs.png'
 import tipping from './tipping.png'
 import doctor from './doctors.png'
 import stethoscope from './stethoscope.svg'
+import users from './users.svg'
+import thumbsup from './thumbs-up.png'
+// import calendar from './calendar.svg'
+import user from './userss.svg'
+import completed from './completed.svg'
+import calendar from './calendar-clock.svg'
 
 export {
   tagType,
@@ -39,5 +45,10 @@ export {
   standocs,
   tipping,
   doctor,
-  stethoscope
+  stethoscope,
+  users,
+  thumbsup,
+  calendar,
+  user,
+  completed
 };

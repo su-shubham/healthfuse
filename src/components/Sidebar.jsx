@@ -68,7 +68,7 @@ const Sidebar = () => {
     }
   }, [location, navlinks]);
   return (
-    <div className="flex flex-col  border-2 border-orange-500 sticky top-5 h-[93vh] bg-[#ffdfc4] rounded-[20px] w-[6%] p-3 hover:shadow-lg transition-all  duration-500 ease-in-out sticky-sidebar">
+    <div className="flex flex-col border-2 border-orange-500 sticky top-5 h-[93vh] bg-[#ffdfc4] rounded-[20px] w-[6%] p-3 hover:shadow-lg transition-all  duration-500 ease-in-out sticky-sidebar">
       <Link to="/">
         <Icon styles="w-[52px] h-[52px] mt-10" imgUrl={logo} />
       </Link>

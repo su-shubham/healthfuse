@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  DoctorsCard,
-  Sidebar,
-} from "../../components";
+import { DoctorsCard, Sidebar } from "../../components";
 
 const Doctor = () => {
   return (

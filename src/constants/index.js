@@ -19,28 +19,8 @@ export const navlinks = [
   {
     name: 'Donate',
     imgUrl: money,
-    link: '/chat',
+    link: '/',
   },
-  // {
-  //   name: 'chat',
-  //   imgUrl: withdraw,
-  //   link: '/chat',
-  // },
-  // {
-  //   name: 'blogs',
-  //   imgUrl: profile,
-  //   link: '/blogs  ',
-  // },
-  // {
-  //   name: 'community',
-  //   imgUrl: profile,
-  //   link: '/community',
-  // },
-  // {
-  //   name: 'about',
-  //   imgUrl: profile,
-  //   link: '/about',
-  // },
   {
     name: 'logout',
     imgUrl: logout,
