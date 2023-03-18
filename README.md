@@ -1,19 +1,56 @@
-**Setup**
+# Medifund 💊💸
 
-Clone or download the project repository
+Medifund is a healthcare project that aims to solve the problem of medical expenses for individuals who cannot afford the costs of their treatment. The project utilizes a combination of web 2.0 and web 3.0 technologies to create a platform that connects patients in need of financial assistance with donors who are willing to contribute towards their medical bills.
 
-Open a terminal in the project directory.
+## 🚀 Features
 
-Run the following command to install the project dependencies:
+- 🌟 Crowdfunding on the Polygon blockchain for specific medical conditions, with secure and transparent transactions using the Matic token.
+- 💻 Web 2.0 platform for appointment booking and doctor-patient communication, with a user-friendly interface built using React and FastAPI at the backend.
+- 🔒 Secure authentication and authorization using Auth0, with features such as passwordless authentication, social logins, and multi-factor authentication.
 
-> npm install
+## 🛠️ Technologies Used
 
-Running the Project
+- 🔗 Polygon blockchain for secure and transparent crowdfunding using the Matic token.
+- 🚀 Beeceptor,Builded  the mock api's.
+- ⚛️ React and FastAPI for building the web 2.0 platform at the frontend and backend respectively.
+- 🔑 Auth0 for secure authentication and authorization.
+- 🌐 Netlify for deployment.
 
-Run the following command to start the development server:
+## 🏃‍♀️ Getting Started
 
-> npm run dev
+To run the Medifund project locally, follow these steps:
+
+1. 📥 Clone the repository:
+
+git clone https://github.com/your-username/medifund.git
+
+
+2. 📥 Install dependencies:
+
+cd medifund
+npm install
+
+
+3. 🚀 Start the web 2.0 platform:
+
+
+4. 🔍 Access the web 2.0 platform at `http://localhost:3000`.
 
 
 
-You should now see the project running in the browser.
+
+
+# Output
+
+![image](https://user-images.githubusercontent.com/70086773/226077988-d23192ac-996a-4c7e-b7f8-5146d43a2891.png)
+![image](https://user-images.githubusercontent.com/70086773/226078000-d0697467-fc5a-45f0-a118-f5653548416d.png)
+![image](https://user-images.githubusercontent.com/70086773/226078004-7b7f89cd-02cd-48f4-acb3-92ca2de5cb5c.png)
+![image](https://user-images.githubusercontent.com/70086773/226078022-c048f854-c6fd-4a6b-82f3-3435e277e251.png)
+![image](https://user-images.githubusercontent.com/70086773/226078055-25791ee0-fa5b-49bc-b586-1b6af5c913ab.png)
+![image](https://user-images.githubusercontent.com/70086773/226078067-2c50f945-5123-4e9c-b0d4-c03f95666467.png)
+![image](https://user-images.githubusercontent.com/70086773/226078090-0db368a0-50bc-44c0-ad9e-269efc790199.png)
+![image](https://user-images.githubusercontent.com/70086773/226078099-1e2d7847-392a-4949-963d-4b14d3380b71.png)
+
+
+
+
