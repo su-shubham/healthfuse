@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { logo } from "../assets";
 import { useAuth0 } from "@auth0/auth0-react";
 
-
 const Header = () => {
-  const { loginWithRedirect } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+
   return (
     <div>
       <header>
@@ -15,14 +15,23 @@ const Header = () => {
               <img className="w-[30px] h-[30px] " src={logo} />
             </Link>
             <div class="flex items-center lg:order-2">
-              <button
-              onClick={() => loginWithRedirect()}
-                class="  bg-orange-300  hover:bg-orange-400 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
-              >
-                Log in
+              {isAuthenticated ? (
+                <button
+                  class="  bg-orange-300  hover:bg-orange-400 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+                  onClick={() => logout()}
+                >
+                  Logout
                 </button>
-              <Link 
-              to="/register"
+              ) : (
+                <button
+                  class="  bg-orange-300  hover:bg-orange-400 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+                  onClick={() => loginWithRedirect()}
+                >
+                  Login
+                </button>
+              )}
+              <Link
+                to="/register"
                 class="  bg-orange-300  hover:bg-orange-400 focus:ring-4 focus:ring-orange-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none "
               >
                 Get started
@@ -68,8 +77,8 @@ const Header = () => {
             >
               <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                 <li>
-                <Link 
-              to="/"
+                  <Link
+                    to="/"
                     href="#"
                     class="block py-2 pr-4 pl-3 text-orange-500 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 "
                     aria-current="page"
@@ -78,8 +87,8 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                <Link 
-              to="/blogs"
+                  <Link
+                    to="/blogs"
                     href="#"
                     class="block py-2 pr-4 pl-3 border-b border-gray-100 hover:text-orange-600 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 :text-gray-400 lg::hover:text-white :hover:bg-gray-700 :hover:text-white lg::hover:bg-transparent :border-gray-700"
                   >
