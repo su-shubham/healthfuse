@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CustomButton from "./CustomButton";
 
 const DoctorsCard = () => {
@@ -35,12 +36,14 @@ const DoctorsCard = () => {
           <h5 className="mb-2 text-md  font-extrabold text-red-400 uppercase">
             Need Help{" "}
           </h5>
+          <Link to ='/chat'>
           <CustomButton
             btnType="button"
             title="Chat Now"
             styles="w-32  bg-red-400  hover:bg-red-500"
             handleClick={() => {}}
-          />
+            />
+            </Link>
         </div>
       </div>
     </div>

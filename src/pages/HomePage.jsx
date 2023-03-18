@@ -62,12 +62,12 @@ const Homes = () => {
                   Medical Expenses.
                 </span>
                 <p class="max-w-2xl mb-6 font-light break-all lg:mb-8 md:text-md lg:text-lg text-gray-500"></p>
-                <button
-                  type="button"
+                <a
+                  href="https://donate-medifund.netlify.app/"
                   class="text-white text-lg font-semibold bg-orange-400 hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-300  rounded-full p-4 text-center mr-2 mb-2"
                 >
                   Start a fundraiser !
-                </button>
+                </a>
               </div>
               <img src={standocs} />
             </div>

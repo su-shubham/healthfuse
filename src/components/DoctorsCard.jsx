@@ -28,122 +28,188 @@ const DoctorsCard = ({
   const handleCloseModal = () => {
     setIsOpen(false);
   };
+  const [userData, setUserData] = useState({
+    "username": "stringssssssss",
+    "docname": "stringsssssssssss",
+    "dateofappoint": "2023-03-17"
+  });
+
+  // Function to update user data on button click
+  const handleButtonClick = async () => {
+    try {
+      const response = await fetch(
+        "https://api-medi.herokuapp.com/updateuser/1",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(userData),
+        }
+      );
+      const data = await response.json();
+      console.log(data);
+      // Reset the user data to default values after successful update
+      setUserData({
+        "username": "string",
+        "docname": "string",
+        "dateofappoint": "2023-03-17"
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
       {doctors.map((doctor) => (
-      <div
-        className="sm:w-[288px] w-full  px-6 rounded-[15px] bg-orange-300 cursor-pointer"
-        onClick={handleClick}
-      >
-        <img
-        src={doctors.specialphto}
-        alt="fund"
-        className="w-full h-[158px] object-cover rounded-[15px]"
-      />
-
-        <div className="flex flex-col p-4">
-          <div className="flex flex-row items-center mb-[18px]">
-            <img
-              src={tagType}
-              alt="tag"
-              className="w-[17px] h-[17px] object-contain"
-            />
-            <p className="ml-[12px] mt-[2px] font-epilogue font-medium text-[12px] text-[#808191]">
-              {doctor.speliazation}
-              {/* Education */}
-            </p>
-          </div>
-
-          <div className="block">
-            <h3 className="font-epilogue font-semibold text-[16px] text-gray-600 hover:text-gray-700 text-left leading-[26px] truncate">
-              {doctor.name}
-              {/* Mr John Doe */}
-            </h3>
-            <p className="mt-[5px] font-epilogue font-normal text-gray-600 text-left leading-[18px] truncate">
-              {doctor.desc}
-              {/* Psychology */}
-            </p>
-          </div>
-
-          <div className="flex justify-between flex-wrap mt-[15px] gap-2">
-            <div className="flex flex-col">
-              <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]">
-                {/* {amountCollected} */}10002
-              </h4>
-              <p className="mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate">
-                {/* Raised of {target} */} 389
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]">
-                {/* {remainingDays} */}23
-              </h4>
-              <p className="mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate">
-                Days Left
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center mt-[20px] gap-[12px]">
-            <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center ">
-              <img
-              src={doctors.docphoto}
-              alt="user"
-              className="w-1/2 h-1/2 "
-            />
-            </div>
-            <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
-              by <span className="text-[#b2b3bd]">{owner}</span>
-            </p>
-            <button
-              className="bg-orange-400 hover:bg-orange-500 rounded-xl p-2"
-              onClick={() => setIsOpen(true)}
-            >
-              Book Now
-            </button>
-          </div>
-        </div>
-        <Modal
-          isOpen={isOpen}
-          onClose={handleCloseModal}
-          title="Book your appointments"
+        <div
+          className="sm:w-[288px] w-full  px-6 rounded-[15px] bg-orange-300 cursor-pointer"
+          onClick={handleClick}
         >
-          <form class="space-y-6" action="#">
-            <div>
-              <label
-                for="name"
-                class="block mb-2 text-sm font-medium text-gray-900"
-              >
-                Name : {doctor.name}
-              </label>
-              <label
-                for="name"
-                class="block mb-2 text-sm font-medium text-gray-900"
-              >
-                Services : {doctor.speliazation}
-              </label>
-            </div>
-            <div className="space-x-2">
-              <button
-                type="submit"
-                class=" text-white space-y-3 bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                Sure !
-              </button>
+          <img
+            src={doctors.specialphto}
+            alt="fund"
+            className="w-full h-[158px] object-cover rounded-[15px]"
+          />
 
+          <div className="flex flex-col p-4">
+            <div className="flex flex-row items-center mb-[18px]">
+              <img
+                src={tagType}
+                alt="tag"
+                className="w-[17px] h-[17px] object-contain"
+              />
+              <p className="ml-[12px] mt-[2px] font-epilogue font-medium text-[12px] text-[#808191]">
+                {doctor.speliazation}
+                {/* Education */}
+              </p>
+            </div>
+
+            <div className="block">
+              <h3 className="font-epilogue font-semibold text-[16px] text-gray-600 hover:text-gray-700 text-left leading-[26px] truncate">
+                {doctor.name}
+                {/* Mr John Doe */}
+              </h3>
+              <p className="mt-[5px] font-epilogue font-normal text-gray-600 text-left leading-[18px] truncate">
+                {doctor.desc}
+                {/* Psychology */}
+              </p>
+            </div>
+
+            <div className="flex justify-between flex-wrap mt-[15px] gap-2">
+              <div className="flex flex-col">
+                <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]">
+                  {/* {amountCollected} */}10002
+                </h4>
+                <p className="mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate">
+                  {/* Raised of {target} */} 389
+                </p>
+              </div>
+              <div className="flex flex-col">
+                <h4 className="font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]">
+                  {/* {remainingDays} */}23
+                </h4>
+                <p className="mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate">
+                  Days Left
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center mt-[20px] gap-[12px]">
+              <div className="w-[30px] h-[30px] rounded-full flex justify-center items-center ">
+                <img
+                  src={doctors.docphoto}
+                  alt="user"
+                  className="w-1/2 h-1/2 "
+                />
+              </div>
+              <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">
+                by <span className="text-[#b2b3bd]">{owner}</span>
+              </p>
               <button
-                onClick={handleCloseModal}
-                type="submit"
-                class=" text-black space-y-3 bg-gray-300 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                className="bg-orange-400 hover:bg-orange-500 rounded-xl p-2"
+                onClick={() => setIsOpen(true)}
               >
-                Cancel
+                Book Now
               </button>
             </div>
-          </form>
-        </Modal>
-      </div>
-      ))} 
+          </div>
+          <Modal
+            isOpen={isOpen}
+            onClose={handleCloseModal}
+            title="Book your appointments"
+          >
+            <form class="space-y-6" action="#">
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                >
+                  Name : {doctor.name}
+                </label>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                >
+                  Services : {doctor.speliazation}
+                </label>
+                <form >
+                  <div>
+                    {/* <label htmlFor="name">Name:</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={userData.name}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={userData.email}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone">Phone:</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={userData.phone}
+                      onChange={handleInputChange}
+                    /> */}
+                  </div>
+                  <button type="button" onClick={handleButtonClick}>
+                    Update User Data
+                  </button>
+                </form>
+              </div>
+              <div className="space-x-2">
+                <button
+                  type="submit"
+                  class=" text-white space-y-3 bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                  Sure !
+                </button>
+
+                <button
+                  onClick={handleCloseModal}
+                  type="submit"
+                  class=" text-black space-y-3 bg-gray-300 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </Modal>
+        </div>
+      ))}
     </>
   );
 };
