@@ -22,7 +22,7 @@ To run the Medifund project locally, follow these steps:
 
 1. 📥 Clone the repository:
 
-git clone https://github.com/your-username/medifund.git
+git clone https://github.com/su-shubham/healthfuse
 
 
 2. 📥 Install dependencies:
@@ -37,15 +37,6 @@ npm install
 4. 🔍 Access the web 2.0 platform at `http://localhost:3000`.
 
 
-
-
-
-# Output
-
-![image](https://user-images.githubusercontent.com/70086773/226077988-d23192ac-996a-4c7e-b7f8-5146d43a2891.png)
-![image](https://user-images.githubusercontent.com/70086773/226078000-d0697467-fc5a-45f0-a118-f5653548416d.png)
-![image](https://user-images.githubusercontent.com/70086773/226078004-7b7f89cd-02cd-48f4-acb3-92ca2de5cb5c.png)
-![image](https://user-images.githubusercontent.com/70086773/226078022-c048f854-c6fd-4a6b-82f3-3435e277e251.png)
 
 
 
